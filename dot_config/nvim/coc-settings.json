@@ -1,0 +1,35 @@
+{
+"coc.preferences.formatOnType": true,
+"diagnostic.checkCurrentLine": true,
+"diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck"
+ },
+ "diagnostic-languageserver.formatFiletypes": {
+   "sh": "shfmt"
+ },
+ "diagnostic-languageserver.formatters": {
+   "shfmt": {
+       "command": "shfmt",
+       "args": ["-i", "4", "-bn", "-ci", "-sr"]
+   }
+ },
+"prettier.semi": false,
+"prettier.trailingComma": "none",
+"prettier.singleQuote": true,
+"eslint.autoFixOnSave": true,
+"python.linting.enabled": true,
+"python.linting.flake8Enabled": true,
+"python.linting.flake8Args": ["max-line-length=120"],
+"python.formatting.provider": "black",
+"python.formatting.blackArgs": ["line-length", "120"],
+"pyright.disableDiagnostics": true,
+"[python]":{
+    "coc.preferences.formatOnSave": true
+},
+"[sh]":{
+    "coc.preferences.formatOnSave": true
+},
+"[typescript]":{
+    "coc.preferences.formatOnSave": true
+    }
+}
