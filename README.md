@@ -27,7 +27,7 @@ sudo apt install gnome-extensions-manager
 
 - https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0
 
-# A repo to refer to  packages and other .dotfiles
+#### A repo to refer to  packages and other .dotfiles
 
 - https://github.com/AaronVerDow/dotfiles
 
