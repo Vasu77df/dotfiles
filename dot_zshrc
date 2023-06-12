@@ -114,23 +114,27 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ANT.AMAZON.COM/vasuper/.zshrc'
+zstyle :compinstall filename '/home/vasuper/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # colorful ls
 if [ -x "$(command -v exa)" ]; then
-    alias lx="exa"
+    alias ls="exa"
     alias la="exa --long --all --group"
 fi
 
-export PATH=$PATH:$HOME/.toolbox/bin
-source /home/ANT.AMAZON.COM/vasuper/.brazil_completion/zsh_completion
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/vasuper/.zprofile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/vasuper/.zprofile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="/home/vasuper/.local/bin:$PATH"
+source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
